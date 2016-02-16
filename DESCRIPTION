@@ -1,11 +1,17 @@
 Package: paco
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1
+Title: A Parallel-Coordinates library for R
+Version: 0.0.1
 Date: 2016-02-11
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: person("Julian", "Heinrich", email = "julian@joules.de", role = c("aut", "cre"))
+Description: This package was created to provide some basic utilities for the
+    visualisation of multidimensional Data with R.
+License: MIT
 LazyData: TRUE
-Suggests: testthat
-Depends: PairViz, graphs, infotheo
+Suggests:
+    testthat
+Depends:
+    PairViz,
+    graph,
+    infotheo
+RoxygenNote: 5.0.1
