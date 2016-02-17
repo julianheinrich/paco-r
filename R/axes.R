@@ -18,6 +18,12 @@ axis.order <- function(x, by = "random") {
   } else if (by == "euclidean") {
     permutation <- hamiltonian(dist(t(x)))
     ret <- ret[permutation]
+  } else if (by == "all") {
+    permutation <- hpaths(n, F)
+    ret <- ret[permutation]
+  } else if (by == "matrix") {
+    permutation <- zigzag(n)
+    ret <- t(apply(permutation, 1, function(p) {ret[p]}))
   }
   ret
 }

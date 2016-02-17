@@ -19,6 +19,14 @@ library(paco)
 
 # order axes by correlation
 parcoord(mtcars[, axis.order(mtcars, by = "correlation")])
+
+# a parallel-coordinates matrix
+data <- mtcars[, -c(2,8:11)]
+pcm <- axis.order(data, "matrix")
+par(mfrow = c(3,1))
+parcoord(data[, pcm[1, ]])
+parcoord(data[, pcm[2, ]])
+parcoord(data[, pcm[3, ]])
 ```
 
 ## htmlwidget
